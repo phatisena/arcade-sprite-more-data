@@ -181,6 +181,15 @@ namespace sprites {
     }
 
     //% block="$name"
+    //% blockId=spriteDataNumberArrayNameShadow
+    //% blockHidden=true shim=TD_ID
+    //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
+    //% name.fieldOptions.key="spritedatanumberarray"
+    export function _numberArrayNameShadow(name: string) {
+        return name
+    }
+
+    //% block="$name"
     //% blockId=spriteDataSpriteNameShadow
     //% blockHidden=true shim=TD_ID
     //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
@@ -190,11 +199,29 @@ namespace sprites {
     }
 
     //% block="$name"
+    //% blockId=spriteDataSpriteArrayNameShadow
+    //% blockHidden=true shim=TD_ID
+    //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
+    //% name.fieldOptions.key="spritedataspritearray"
+    export function _spriteArrayNameShadow(name: string) {
+        return name
+    }
+
+    //% block="$name"
     //% blockId=spriteDataBooleanNameShadow
     //% blockHidden=true shim=TD_ID
     //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
     //% name.fieldOptions.key="spritedataboolean"
     export function _booleanNameShadow(name: string) {
+        return name
+    }
+
+    //% block="$name"
+    //% blockId=spriteDataBooleanArrayNameShadow
+    //% blockHidden=true shim=TD_ID
+    //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
+    //% name.fieldOptions.key="spritedatabooleanarray"
+    export function _booleanArrayNameShadow(name: string) {
         return name
     }
 
@@ -213,6 +240,15 @@ namespace sprites {
     //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
     //% name.fieldOptions.key="spritedataimage"
     export function _imageNameShadow(name: string) {
+        return name
+    }
+
+    //% block="$name"
+    //% blockId=spriteDataImageArrayNameShadow
+    //% blockHidden=true shim=TD_ID
+    //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
+    //% name.fieldOptions.key="spritedataimagearray"
+    export function _imageArrayNameShadow(name: string) {
         return name
     }
 }
