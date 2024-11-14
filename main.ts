@@ -40,6 +40,35 @@ namespace sprites {
         const d = sprite.data;
         return d[name] as number;
     }
+    
+    /**
+     * Sets a number in the data of a sprite
+     */
+    //% blockId=spriteDataSetNumberArray block="set $sprite=variables_get data $name to number array $value"
+    //% value.shadow="create_list_with" value.defl=0
+    //% name.shadow="spriteDataNumberArrayNameShadow"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function setDataNumberArray(sprite: Sprite, name: string, value: number[]) {
+        if (!sprite || !name) return;
+        const d = sprite.data;
+        d[name] = value;
+    }
+
+    /**
+     * Gets a number in the data of a sprite
+     */
+    //% blockId=spriteDataGetNumberArray block="$sprite=variables_get data $name as number array"
+    //% name.shadow="spriteDataNumberArrayNameShadow"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function readDataNumberArray(sprite: Sprite, name: string): number[] {
+        if (!sprite || !name) return 0;
+        const d = sprite.data;
+        return d[name] as number[];
+    }
 
     /**
      * Sets a string in the data of a sprite
@@ -67,6 +96,35 @@ namespace sprites {
         if (!sprite || !name) return "";
         const d = sprite.data;
         return d[name] as string;
+    }
+
+    /**
+     * Sets a string in the data of a sprite
+     */
+    //% blockId=spriteDataSetStringArray block="set $sprite=variables_get data $name to string array $value"
+    //% value.shadow="create_list_with" value.defl=""
+    //% name.shadow="spriteDataStringArrayNameShadow"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function setDataStringArray(sprite: Sprite, name: string, value: string[]) {
+        if (!sprite || !name) return;
+        const d = sprite.data;
+        d[name] = value;
+    }
+
+    /**
+     * Gets a number in the data of a sprite
+     */
+    //% blockId=spriteDataGetStringArray block="$sprite=variables_get data $name as string array"
+    //% name.shadow="spriteDataStringArrayNameShadow"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function readDataStringArray(sprite: Sprite, name: string): string[] {
+        if (!sprite || !name) return "";
+        const d = sprite.data;
+        return d[name] as string[];
     }
 
     /**
