@@ -65,7 +65,7 @@ namespace sprites {
     //% weight=10
     //% blockGap=8
     export function readDataNumberArray(sprite: Sprite, name: string): number[] {
-        if (!sprite || !name) return 0;
+        if (!sprite || !name) return undefined;
         const d = sprite.data;
         return d[name] as number[];
     }
@@ -122,7 +122,7 @@ namespace sprites {
     //% weight=10
     //% blockGap=8
     export function readDataStringArray(sprite: Sprite, name: string): string[] {
-        if (!sprite || !name) return "";
+        if (!sprite || !name) return undefined;
         const d = sprite.data;
         return d[name] as string[];
     }
@@ -154,6 +154,36 @@ namespace sprites {
         const d = sprite.data;
         return !!d[name];
     }
+    
+
+    /**
+     * Sets a boolean in the data of a sprite
+     */
+    //% blockId=spriteDataSetBooleanArray block="set $sprite=variables_get data $name to boolean array $value"
+    //% value.shadow="create_list_with" value.defl=false
+    //% name.shadow="spriteDataBooleanArrayNameShadow"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function setDataBooleanArray(sprite: Sprite, name: string, value: boolean[]) {
+        if (!sprite || !name) return;
+        const d = sprite.data;
+        d[name] = value;
+    }
+
+    /**
+     * Gets a boolean in the data of a sprite
+     */
+    //% blockId=spriteDataGetBooleanArray block="$sprite=variables_get data $name as boolean array"
+    //% name.shadow="spriteDataBooleanArrayNameShadow"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function readDataBooleanArray(sprite: Sprite, name: string): boolean[] {
+        if (!sprite || !name) return undefined;
+        const d = sprite.data;
+        return d[name][];
+    }
 
     /**
      * Sets a sprite in the data of a sprite
@@ -183,7 +213,35 @@ namespace sprites {
         return d[name] as Sprite;
     }
 
+    /**
+     * Sets a sprite in the data of a sprite
+     */
+    //% blockId=spriteDataSetSpriteArray block="set $sprite=variables_get data $name to sprite array $value"
+    //% value.shadow="create_list_with" value.defl=variables_get
+    //% name.shadow="spriteDataSpriteNameShadow"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function setDataSpriteArray(sprite: Sprite, name: string, value: Sprite[]) {
+        if (!sprite || !name) return;
+        const d = sprite.data;
+        d[name] = value;
+    }
 
+    /**
+     * Gets a sprite in the data of a sprite
+     */
+    //% blockId=spriteDataGetSpriteArray block="$sprite=variables_get data $name as sprite array"
+    //% name.shadow="spriteDataSpriteArrayNameShadow"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function readDataSpriteArray(sprite: Sprite, name: string): Sprite[] {
+        if (!sprite || !name) return undefined;
+        const d = sprite.data;
+        return d[name] as Sprite[];
+    }
+    
     /**
      * Sets an Image in the data of a sprite.
      * Deprecated. Use setDataImageValue instead
@@ -228,6 +286,51 @@ namespace sprites {
         return d[name] as Image;
     }
 
+    /**
+     * Sets an Image in the data of a sprite.
+     * Deprecated. Use setDataImageValue instead
+     */
+    //% blockId=spriteDataSetImageArray block="set $sprite=variables_get data $name to image array $value"
+    //% value.shadow="create_list_with" value.defl=screen_image_picker
+    //% name.shadow="spriteDataImageArrayNameShadow"
+    //% group="Data"
+    //% deprecated=1
+    //% weight=9
+    //% blockGap=8
+    export function setDataImageArray(sprite: Sprite, name: string, value: Image[]) {
+        setDataImageValue(sprite, name, value);
+    }
+
+    /**
+     * Sets an Image in the data of a sprite
+     */
+    //% blockId=spriteDataSetImageValueArray block="set $sprite data $name to image array $value"
+    //% value.shadow="create_list_with" value.defl=screen_image_picker
+    //% name.shadow="spriteDataImageArrayNameShadow"
+    //% group="Data"
+    //% sprite.shadow=variables_get
+    //% value.shadow=screen_image_picker
+    //% weight=9
+    //% blockGap=8
+    export function setDataImageValueArray(sprite: Sprite, name: string, value: Image[]) {
+        if (!sprite || !name) return;
+        const d = sprite.data;
+        d[name] = value;
+    }
+
+    /**
+     * Gets a sprite in the data of a sprite
+     */
+    //% blockId=spriteDataGetImageArray block="$sprite=variables_get data $name as image array"
+    //% name.shadow="spriteDataImageArrayNameShadow"
+    //% group="Data"
+    //% weight=9
+    //% blockGap=8
+    export function readDataImageArray(sprite: Sprite, name: string): Image[] {
+        if (!sprite || !name) return undefined;
+        const d = sprite.data;
+        return d[name] as Image[];
+    }
 
     //% block="$name"
     //% blockId=spriteDataNumberNameShadow
@@ -289,6 +392,15 @@ namespace sprites {
     //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
     //% name.fieldOptions.key="spritedatastring"
     export function _stringNameShadow(name: string) {
+        return name
+    }
+
+    //% block="$name"
+    //% blockId=spriteDataStringArrayNameShadow
+    //% blockHidden=true shim=TD_ID
+    //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
+    //% name.fieldOptions.key="spritedatastringarray"
+    export function _stringArrayNameShadow(name: string) {
         return name
     }
 
