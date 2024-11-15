@@ -85,7 +85,7 @@ namespace sprites {
     }
 
     /**
-     * Gets a number in the data of a sprite
+     * Gets a string in the data of a sprite
      */
     //% blockId=spriteDataGetString block="$sprite=variables_get data $name as string"
     //% name.shadow="spriteDataStringNameShadow"
@@ -114,7 +114,7 @@ namespace sprites {
     }
 
     /**
-     * Gets a number array in the data of a sprite
+     * Gets a string array in the data of a sprite
      */
     //% blockId=spriteDataGetStringArray block="$sprite=variables_get data $name as string array"
     //% name.shadow="spriteDataStringArrayNameShadow"
@@ -182,7 +182,7 @@ namespace sprites {
     export function readDataBooleanArray(sprite: Sprite, name: string): boolean[] {
         if (!sprite || !name) return undefined;
         const d = sprite.data;
-        return d[name][];
+        return d[name] as boolean[];
     }
 
     /**
@@ -298,7 +298,7 @@ namespace sprites {
     //% weight=9
     //% blockGap=8
     export function setDataImageArray(sprite: Sprite, name: string, value: Image[]) {
-        setDataImageValue(sprite, name, value);
+        setDataImageValueArray(sprite, name, value);
     }
 
     /**
