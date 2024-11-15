@@ -309,7 +309,6 @@ namespace sprites {
     //% name.shadow="spriteDataImageArrayNameShadow"
     //% group="Data"
     //% sprite.shadow=variables_get
-    //% value.shadow=screen_image_picker
     //% weight=9
     //% blockGap=8
     export function setDataImageValueArray(sprite: Sprite, name: string, value: Image[]) {
