@@ -42,7 +42,7 @@ namespace sprites {
     }
     
     /**
-     * Sets a number in the data of a sprite
+     * Sets a number array in the data of a sprite
      */
     //% blockId=spriteDataSetNumberArray block="set $sprite=variables_get data $name to number array $value"
     //% value.shadow="create_list_with" value.defl=0
@@ -57,7 +57,7 @@ namespace sprites {
     }
 
     /**
-     * Gets a number in the data of a sprite
+     * Gets a number array in the data of a sprite
      */
     //% blockId=spriteDataGetNumberArray block="$sprite=variables_get data $name as number array"
     //% name.shadow="spriteDataNumberArrayNameShadow"
@@ -99,7 +99,7 @@ namespace sprites {
     }
 
     /**
-     * Sets a string in the data of a sprite
+     * Sets a string array in the data of a sprite
      */
     //% blockId=spriteDataSetStringArray block="set $sprite=variables_get data $name to string array $value"
     //% value.shadow="create_list_with" value.defl=""
@@ -114,7 +114,7 @@ namespace sprites {
     }
 
     /**
-     * Gets a number in the data of a sprite
+     * Gets a number array in the data of a sprite
      */
     //% blockId=spriteDataGetStringArray block="$sprite=variables_get data $name as string array"
     //% name.shadow="spriteDataStringArrayNameShadow"
@@ -157,7 +157,7 @@ namespace sprites {
     
 
     /**
-     * Sets a boolean in the data of a sprite
+     * Sets a boolean array in the data of a sprite
      */
     //% blockId=spriteDataSetBooleanArray block="set $sprite=variables_get data $name to boolean array $value"
     //% value.shadow="create_list_with" value.defl=false
@@ -172,7 +172,7 @@ namespace sprites {
     }
 
     /**
-     * Gets a boolean in the data of a sprite
+     * Gets a boolean array in the data of a sprite
      */
     //% blockId=spriteDataGetBooleanArray block="$sprite=variables_get data $name as boolean array"
     //% name.shadow="spriteDataBooleanArrayNameShadow"
@@ -214,7 +214,7 @@ namespace sprites {
     }
 
     /**
-     * Sets a sprite in the data of a sprite
+     * Sets a sprite array in the data of a sprite
      */
     //% blockId=spriteDataSetSpriteArray block="set $sprite=variables_get data $name to sprite array $value"
     //% value.shadow="create_list_with" value.defl=variables_get
@@ -229,7 +229,7 @@ namespace sprites {
     }
 
     /**
-     * Gets a sprite in the data of a sprite
+     * Gets a sprite array in the data of a sprite
      */
     //% blockId=spriteDataGetSpriteArray block="$sprite=variables_get data $name as sprite array"
     //% name.shadow="spriteDataSpriteArrayNameShadow"
@@ -287,7 +287,7 @@ namespace sprites {
     }
 
     /**
-     * Sets an Image in the data of a sprite.
+     * Sets an Image array in the data of a sprite.
      * Deprecated. Use setDataImageValue instead
      */
     //% blockId=spriteDataSetImageArray block="set $sprite=variables_get data $name to image array $value"
@@ -302,7 +302,7 @@ namespace sprites {
     }
 
     /**
-     * Sets an Image in the data of a sprite
+     * Sets an Image array in the data of a sprite
      */
     //% blockId=spriteDataSetImageValueArray block="set $sprite data $name to image array $value"
     //% value.shadow="create_list_with" value.defl=screen_image_picker
