@@ -102,7 +102,6 @@ namespace sprites {
      * Sets a string array in the data of a sprite
      */
     //% blockId=spriteDataSetStringArray block="set $sprite=variables_get data $name to string array $value"
-    //% value.shadow="lists_create_with" value.defl=""
     //% name.shadow="spriteDataStringArrayNameShadow"
     //% group="Data"
     //% weight=10
@@ -160,7 +159,6 @@ namespace sprites {
      * Sets a boolean array in the data of a sprite
      */
     //% blockId=spriteDataSetBooleanArray block="set $sprite=variables_get data $name to boolean array $value"
-    //% value.shadow="lists_create_with" value.defl=false
     //% name.shadow="spriteDataBooleanArrayNameShadow"
     //% group="Data"
     //% weight=10
@@ -217,7 +215,6 @@ namespace sprites {
      * Sets a sprite array in the data of a sprite
      */
     //% blockId=spriteDataSetSpriteArray block="set $sprite=variables_get data $name to sprite array $value"
-    //% value.shadow="lists_create_with" value.defl=variables_get
     //% name.shadow="spriteDataSpriteNameShadow"
     //% group="Data"
     //% weight=10
