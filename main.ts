@@ -1,4 +1,5 @@
 namespace sprites {
+    
     /**
      * Sets a number in the data of a sprite
      */
