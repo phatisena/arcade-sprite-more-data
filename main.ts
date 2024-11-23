@@ -47,7 +47,7 @@ namespace sprites {
      */
     //% blockId=spriteDataSetNumberArray block="set $sprite=variables_get data $name to number array $value"
     //% name.shadow="spriteDataNumberArrayNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% weight=10
     //% blockGap=8
     export function setDataNumberArray(sprite: Sprite, name: string, value: number[]) {
@@ -61,7 +61,7 @@ namespace sprites {
      */
     //% blockId=spriteDataGetNumberArray block="$sprite=variables_get data $name as number array"
     //% name.shadow="spriteDataNumberArrayNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% weight=10
     //% blockGap=8
     export function readDataNumberArray(sprite: Sprite, name: string): number[] {
@@ -103,7 +103,7 @@ namespace sprites {
      */
     //% blockId=spriteDataSetStringArray block="set $sprite=variables_get data $name to string array $value"
     //% name.shadow="spriteDataStringArrayNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% weight=10
     //% blockGap=8
     export function setDataStringArray(sprite: Sprite, name: string, value: string[]) {
@@ -117,7 +117,7 @@ namespace sprites {
      */
     //% blockId=spriteDataGetStringArray block="$sprite=variables_get data $name as string array"
     //% name.shadow="spriteDataStringArrayNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% weight=10
     //% blockGap=8
     export function readDataStringArray(sprite: Sprite, name: string): string[] {
@@ -160,7 +160,7 @@ namespace sprites {
      */
     //% blockId=spriteDataSetBooleanArray block="set $sprite=variables_get data $name to boolean array $value"
     //% name.shadow="spriteDataBooleanArrayNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% weight=10
     //% blockGap=8
     export function setDataBooleanArray(sprite: Sprite, name: string, value: boolean[]) {
@@ -174,7 +174,7 @@ namespace sprites {
      */
     //% blockId=spriteDataGetBooleanArray block="$sprite=variables_get data $name as boolean array"
     //% name.shadow="spriteDataBooleanArrayNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% weight=10
     //% blockGap=8
     export function readDataBooleanArray(sprite: Sprite, name: string): boolean[] {
@@ -217,7 +217,7 @@ namespace sprites {
     //% blockId=spriteDataSetSpriteArray block="set $sprite=variables_get data $name to sprite array $value"
     //% value.shadow="lists_create_with"
     //% name.shadow="spriteDataSpriteNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% weight=10
     //% blockGap=8
     export function setDataSpriteArray(sprite: Sprite, name: string, value: Sprite[]) {
@@ -231,7 +231,7 @@ namespace sprites {
      */
     //% blockId=spriteDataGetSpriteArray block="$sprite=variables_get data $name as sprite array"
     //% name.shadow="spriteDataSpriteArrayNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% weight=10
     //% blockGap=8
     export function readDataSpriteArray(sprite: Sprite, name: string): Sprite[] {
@@ -291,7 +291,7 @@ namespace sprites {
     //% blockId=spriteDataSetImageArray block="set $sprite=variables_get data $name to image array $value"
     //% value.shadow="lists_create_with" value.defl=screen_image_picker
     //% name.shadow="spriteDataImageArrayNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% deprecated=1
     //% weight=9
     //% blockGap=8
@@ -305,7 +305,7 @@ namespace sprites {
     //% blockId=spriteDataSetImageValueArray block="set $sprite data $name to image array $value"
     //% value.shadow="lists_create_with" value.defl=screen_image_picker
     //% name.shadow="spriteDataImageArrayNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% sprite.shadow=variables_get
     //% weight=9
     //% blockGap=8
@@ -320,7 +320,7 @@ namespace sprites {
      */
     //% blockId=spriteDataGetImageArray block="$sprite=variables_get data $name as image array"
     //% name.shadow="spriteDataImageArrayNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% weight=9
     //% blockGap=8
     export function readDataImageArray(sprite: Sprite, name: string): Image[] {
