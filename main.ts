@@ -215,6 +215,7 @@ namespace sprites {
      * Sets a sprite array in the data of a sprite
      */
     //% blockId=spriteDataSetSpriteArray block="set $sprite=variables_get data $name to sprite array $value"
+    //% value.shadow="lists_create_with"
     //% name.shadow="spriteDataSpriteNameShadow"
     //% group="Data"
     //% weight=10
