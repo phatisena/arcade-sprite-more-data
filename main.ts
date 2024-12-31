@@ -337,7 +337,7 @@ namespace sprites {
     //% group="Data"
     //% weight=10
     //% blockGap=8
-    export function setDataLocation(sprite: Sprite, name: string, value: scene.location) {
+    export function setDataLocation(sprite: Sprite, name: string, value: tiles.Location) {
         if (!sprite || !name) return;
         const d = sprite.data;
         d[name] = value;
