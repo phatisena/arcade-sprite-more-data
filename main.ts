@@ -334,6 +334,7 @@ namespace sprites {
      */
     //% blockId=spriteDataSetLocation block="set $sprite=variables_get data $name to location $value"
     //% name.shadow="spriteDataLocationNameShadow"
+    //% value.shadow=mapgettile
     //% group="Data"
     //% weight=8
     //% blockGap=8
@@ -362,6 +363,7 @@ namespace sprites {
      */
     //% blockId=spriteDataSetLocationArray block="set $sprite=variables_get data $name to location $value"
     //% name.shadow="spriteDataLocationArrayNameShadow"
+    //% value.shadow="lists_create_with" value.defl=mapgettile
     //% group="Data array"
     //% weight=8
     //% blockGap=8
