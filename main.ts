@@ -351,7 +351,7 @@ namespace sprites {
     //% group="Data"
     //% weight=8
     //% blockGap=8
-    export function readDataLocation(sprite: Sprite, name: string): boolean {
+    export function readDataLocation(sprite: Sprite, name: string): tiles.Location {
         if (!sprite || !name) return undefined;
         const d = sprite.data;
         return d[name] as tiles.Location;
@@ -362,7 +362,7 @@ namespace sprites {
      */
     //% blockId=spriteDataSetLocationArray block="set $sprite=variables_get data $name to location $value"
     //% name.shadow="spriteDataLocationArrayNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% weight=8
     //% blockGap=8
     export function setDataLocationArray(sprite: Sprite, name: string, value: tiles.Location[]) {
@@ -376,10 +376,10 @@ namespace sprites {
      */
     //% blockId=spriteDataGetLocationArray block="$sprite=variables_get data $name as boolean"
     //% name.shadow="spriteDataLocationArrayNameShadow"
-    //% group="Data"
+    //% group="Data array"
     //% weight=8
     //% blockGap=8
-    export function readDataLocationArray(sprite: Sprite, name: string): boolean {
+    export function readDataLocationArray(sprite: Sprite, name: string): tiles.Location[] {
         if (!sprite || !name) return undefined;
         const d = sprite.data;
         return d[name] as tiles.Location[];
