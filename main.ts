@@ -333,14 +333,56 @@ namespace sprites {
      * Sets a location in the data of a sprite
      */
     //% blockId=spriteDataSetLocation block="set $sprite=variables_get data $name to location $value"
-    //% name.shadow="spriteDataSpriteNameShadow"
+    //% name.shadow="spriteDataLocationNameShadow"
     //% group="Data"
-    //% weight=10
+    //% weight=8
     //% blockGap=8
     export function setDataLocation(sprite: Sprite, name: string, value: tiles.Location) {
         if (!sprite || !name) return;
         const d = sprite.data;
         d[name] = value;
+    }
+
+    /**
+     * Gets a location in the data of a sprite
+     */
+    //% blockId=spriteDataGetLocation block="$sprite=variables_get data $name as boolean"
+    //% name.shadow="spriteDataLocationNameShadow"
+    //% group="Data"
+    //% weight=8
+    //% blockGap=8
+    export function readDataLocation(sprite: Sprite, name: string): boolean {
+        if (!sprite || !name) return undefined;
+        const d = sprite.data;
+        return d[name] as tiles.Location;
+    }
+
+    /**
+     * Sets a location array in the data of a sprite
+     */
+    //% blockId=spriteDataSetLocationArray block="set $sprite=variables_get data $name to location $value"
+    //% name.shadow="spriteDataLocationArrayNameShadow"
+    //% group="Data"
+    //% weight=8
+    //% blockGap=8
+    export function setDataLocationArray(sprite: Sprite, name: string, value: tiles.Location[]) {
+        if (!sprite || !name) return;
+        const d = sprite.data;
+        d[name] = value;
+    }
+
+    /**
+     * Gets a location array in the data of a sprite
+     */
+    //% blockId=spriteDataGetLocationArray block="$sprite=variables_get data $name as boolean"
+    //% name.shadow="spriteDataLocationArrayNameShadow"
+    //% group="Data"
+    //% weight=8
+    //% blockGap=8
+    export function readDataLocationArray(sprite: Sprite, name: string): boolean {
+        if (!sprite || !name) return undefined;
+        const d = sprite.data;
+        return d[name] as tiles.Location[];
     }
 
     //% block="$name"
@@ -430,6 +472,24 @@ namespace sprites {
     //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
     //% name.fieldOptions.key="spritedataimagearray"
     export function _imageArrayNameShadow(name: string) {
+        return name
+    }
+
+    //% block="$name"
+    //% blockId=spriteDataLocationNameShadow
+    //% blockHidden=true shim=TD_ID
+    //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
+    //% name.fieldOptions.key="spritedatalocation"
+    export function _locationNameShadow(name: string) {
+        return name
+    }
+
+    //% block="$name"
+    //% blockId=spriteDataLocationArrayNameShadow
+    //% blockHidden=true shim=TD_ID
+    //% name.fieldEditor="autocomplete" name.fieldOptions.decompileLiterals=true
+    //% name.fieldOptions.key="spritedatalocationarray"
+    export function _locationArrayNameShadow(name: string) {
         return name
     }
 }
