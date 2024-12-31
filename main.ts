@@ -316,7 +316,7 @@ namespace sprites {
     }
 
     /**
-     * Gets a sprite in the data of a sprite
+     * Gets a Image array in the data of a sprite
      */
     //% blockId=spriteDataGetImageArray block="$sprite=variables_get data $name as image array"
     //% name.shadow="spriteDataImageArrayNameShadow"
@@ -327,6 +327,20 @@ namespace sprites {
         if (!sprite || !name) return undefined;
         const d = sprite.data;
         return d[name] as Image[];
+    }
+
+    /**
+     * Sets a location in the data of a sprite
+     */
+    //% blockId=spriteDataSetLocation block="set $sprite=variables_get data $name to location $value"
+    //% name.shadow="spriteDataSpriteNameShadow"
+    //% group="Data"
+    //% weight=10
+    //% blockGap=8
+    export function setDataLocation(sprite: Sprite, name: string, value: scene.location) {
+        if (!sprite || !name) return;
+        const d = sprite.data;
+        d[name] = value;
     }
 
     //% block="$name"
