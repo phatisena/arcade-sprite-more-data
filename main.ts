@@ -347,7 +347,7 @@ namespace sprites {
     /**
      * Gets a location in the data of a sprite
      */
-    //% blockId=spriteDataGetLocation block="$sprite=variables_get data $name as boolean"
+    //% blockId=spriteDataGetLocation block="$sprite=variables_get data $name as location"
     //% name.shadow="spriteDataLocationNameShadow"
     //% group="Data"
     //% weight=8
@@ -361,7 +361,7 @@ namespace sprites {
     /**
      * Sets a location array in the data of a sprite
      */
-    //% blockId=spriteDataSetLocationArray block="set $sprite=variables_get data $name to location $value"
+    //% blockId=spriteDataSetLocationArray block="set $sprite=variables_get data $name to location array $value"
     //% name.shadow="spriteDataLocationArrayNameShadow"
     //% value.shadow="lists_create_with" value.defl=mapgettile
     //% group="Data array"
@@ -376,7 +376,7 @@ namespace sprites {
     /**
      * Gets a location array in the data of a sprite
      */
-    //% blockId=spriteDataGetLocationArray block="$sprite=variables_get data $name as boolean"
+    //% blockId=spriteDataGetLocationArray block="$sprite=variables_get data $name as location array"
     //% name.shadow="spriteDataLocationArrayNameShadow"
     //% group="Data array"
     //% weight=8
